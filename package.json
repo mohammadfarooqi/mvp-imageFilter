@@ -1,0 +1,26 @@
+{
+  "name": "mvp-imageFilter",
+  "version": "1.0.0",
+  "description": "mvp image filter app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohammadfarooqi/mvp-imageFilter.git"
+  },
+  "author": "Mohammad Farooqi",
+  "license": "UNLICENCED",
+  "bugs": {
+    "url": "https://github.com/mohammadfarooqi/mvp-imageFilter/issues"
+  },
+  "homepage": "https://github.com/mohammadfarooqi/mvp-imageFilter#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.14.0",
+    "mongoose": "^4.9.0",
+    "morgan": "^1.8.1",
+    "request": "^2.72.0"
+  }
+}

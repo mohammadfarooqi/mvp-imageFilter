@@ -1,0 +1,14 @@
+<div ng-controller="mainCtrl">
+  <form name="imgForm">
+    Enter Image URL: <input type="url" name="imgUrl" data-ng-model="imgUrl">
+    <button data-ng-click="submit(imgForm)">Submit</button>
+  </form>
+
+  <hr>
+
+  <!-- <img src="{{image.src}}" id="img" width="400" height="400" crossorigin="anonymous"/> -->
+  <div id="original"></div>
+  <br>
+  <div id="copy"></div>
+
+</div>
