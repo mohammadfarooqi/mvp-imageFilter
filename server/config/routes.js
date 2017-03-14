@@ -2,9 +2,11 @@ var helpers = require('./helpers.js');
 var path = require('path');
 var request = require('request');
 var Url = require('./urlModel.js');
+var Image = require('./imageModel.js');
+
 
 module.exports = function (app, express) {
-  app.post('/api/image', function (req, res) {
+  app.post('/api/url', function (req, res) {
     request({url: req.body.url, encoding: null}, function (error, response, body) {
       if (error) {
         throw error;
@@ -50,6 +52,41 @@ module.exports = function (app, express) {
       }
 
       res.send(urls);
+    });
+  });
+
+  app.post('/api/image', function (req, res) {
+    var image = req.body.image;
+
+    new Image({image: image}).save(function (err) {
+      if (err) {
+        throw err;
+      } else {
+        console.log('inserted image');
+      }
+      res.send('done');
+    });
+  });
+
+  app.get('/api/images', function (req, res) {
+    Image.find({}, '_id', function (err, images) {
+      if (err) {
+        throw err;
+      }
+
+      res.send(images);
+    })
+  });
+
+  app.get('/api/image/:id', function (req, res) {
+    var imageId = req.params.id;
+
+    Image.findOne({_id: imageId}, function (err, image) {
+      if (err) {
+        throw err;
+      }
+
+      res.send(image);
     })
   });
 

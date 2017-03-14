@@ -1,0 +1,22 @@
+<div ng-controller="webcamCtrl">
+  <div id="result">
+    <video id="video" width="640" height="480" autoplay></video>
+    <br>
+    <br>
+    <button id="snap">Take Picture!</button>
+    <br>
+    <br>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <br>
+    <br>
+    <button ng-click="applyFilter(&quot;vintage&quot;)" class="ng-scope">Vintage</button>
+    <button ng-click="applyFilter(&quot;lomo&quot;)" class="ng-scope">Lomo</button>
+    <button ng-click="applyFilter(&quot;clarity&quot;)" class="ng-scope">Clarity</button>
+    <button ng-click="applyFilter(&quot;sinCity&quot;)" class="ng-scope">Sin City</button>
+    <button ng-click="applyFilter(&quot;sunrise&quot;)" class="ng-scope">Sunrise</button>
+    <button ng-click="applyFilter(&quot;crossProcess&quot;)" class="ng-scope">Cross Process</button>
+    <br>
+    <br>
+    <button ng-click="saveImage()" class="ng-scope">Save Image</button>
+  </div>
+</div>
