@@ -1,0 +1,6 @@
+make one image work and add filter
+attempt to make it dynamic via new urls
+create server
+server static files via server
+create routes as needed
+back to frontend, utilize routes as factories and update pages
