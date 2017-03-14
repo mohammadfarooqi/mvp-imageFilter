@@ -57,7 +57,6 @@ angular.module('app', ['ngRoute'])
 
       var img = new Image();
       img.src = $scope.imgUrl;
-      img.height = img.height * 0.8;
 
       var originalH2 = document.createElement('h2');
       originalH2.innerText = 'Original';
